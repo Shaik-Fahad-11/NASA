@@ -1,0 +1,116 @@
+/* Basic Reset */
+* {
+    margin-top: 10px;
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container for the Card */
+.slide {
+    position: relative;
+    width: 600px; /* Adjust card width */
+    height: auto; /* Adjust height to auto for better fitting */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    display: inline-flex;
+    margin-left: 100px;
+}
+
+/* Caption Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with reduced opacity for brightness */
+    padding: 20px;
+    color: #333; /* Dark gray for better contrast */
+    width: 100%;
+    font-weight: bold; /* Make all text bold */
+}
+
+/* Heading Style */
+.caption h1 {
+    font-size: 28px; /* Increased heading size */
+    margin-bottom: 10px;
+}
+
+/* Description Style */
+.caption p {
+    font-size: 18px; /* Increased paragraph size */
+    margin-bottom: 15px;
+}
+
+/* Radio Button Style */
+label {
+    display: block; /* Stack radio buttons vertically */
+    margin: 10px 0;
+    font-size: 16px; /* Increased font size for readability */
+    color: #333; /* Dark gray text */
+}
+
+/* Button Style */
+button {
+    display: block; /* Ensures button is block-level */
+    text-decoration: none;
+    background-color: #ff5722; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    border: none; /* Remove border */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Space above button */
+    width: 70px; /* Make button full width */
+}
+
+button:hover {
+    background-color: #e64a19; /* Darker on hover */
+}
+
+button:focus {
+    outline: 2px solid #ff5722; /* Outline for focus */
+    outline-offset: 2px; /* Space between outline and button */
+}
+
+/* Response and Score Style */
+#response {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Dark gray for response text */
+}
+
+#score {
+    text-align: center;
+    font-size: 20px; /* Increased score font size */
+}
+
+/* Card responsive design */
+@media screen and (max-width: 600px) {
+    .slide {
+        width: 100%; /* Make full width on small screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .caption h1 {
+        font-size: 22px; /* Decrease heading size for smaller screens */
+    }
+
+    .caption p {
+        font-size: 16px; /* Decrease description size */
+    }
+
+    button {
+        width: 100%; /* Make button full width on small screens */
+    }
+}
+
+/* Additional Responsive Design for Medium Screens */
+@media screen and (max-width: 900px) {
+    .slide {
+        margin-left: 20px; /* Less margin on medium screens */
+    }
+}

@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: url("stroyback.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+    /*color: #ffffff;*/
+    /* background-color: #674188; */
+}
+
+/* Navigation Bar Start */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
+    transition: 0.5s;
+}
+
+.header:hover::before {
+    left: 100%;
+}
+
+.logo {
+    color:white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+#menu-icon {
+    font-size: 36px;
+    color: white;
+    display: none;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header {
+        padding: 1.25rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 4%;
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: grid;
+        justify-content: center;
+        margin: 1.5rem 0;
+    }
+
+    .nav-bg {
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        height: 295px;
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        z-index: 99;
+        display: none;
+    }
+
+    .nav-bg.active {
+        display: block;
+    }
+}
+
+.heading {
+    color: red;
+    /* Match with the accent color used in the timeline */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 50pt;
+}
+
+
+/* Timeline Container */
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+    justify-content: center;
+    display: grid;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+    padding: 40px 0 40px 30px;
+}
+
+.card:nth-child(even) {
+    padding: 40px 30px 40px 0;
+}
+
+/* Global ::before */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid red;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info2 {
+    display: flex;
+    flex-direction: column;
+    background: #262734;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Title of the card */
+.title {
+    color: red;
+    position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid red;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even)>.info2>.title {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd)>.info2>.title::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even)>.info2>.title::before {
+    right: -45px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #e8e2e2;
+    margin-top: 100px;
+}
+
+footer .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 80px;
+}
+
+footer .container .sec h2 {
+    position: relative;
+    color: none;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer.container.sec p {
+    color: #555;
+}
+
+footer .container .sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+footer .container .sci li {
+    list-style: none;
+}
+
+footer .container .sci li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer .container .sci li a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container .quicklinks {
+    position: relative;
+}
+
+footer .container .quicklinks ul li {
+    list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .container .contact .info {
+    position: relative;
+}
+
+footer .container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .container .contact .info li span {
+    color: black;
+    font-size: 20px;
+}
+
+footer .container .contact .info li a {
+    color: black;
+    text-decoration: none;
+}
+
+.CopyRightText {
+    width: 100%;
+    background: #fff;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}

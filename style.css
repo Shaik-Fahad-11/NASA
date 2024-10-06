@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Nunito';
+    box-sizing: border-box;
+}
+
+.header {
+    height: 70px;
+    background: #FAF7F0;
+    display: flex;
+    justify-content:space-between;
+    padding: 2px 10px;
+    box-shadow:0 1px 3px -2px black;
+    padding-right: 30px;
+}
+.logo{
+    display: flex;
+    gap: 10spx;
+    align-items: center;
+    color: #674188;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 20px;
+
+}
+a{
+    text-decoration: none;
+    color: #674188;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #674188;
+    font-size: 20px;
+    gap: 50px;
+    
+}
+.nav_menu li{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    color: #674188;
+}
+
+.hero {
+    background: #F7EFE5;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly with space between them */
+    height: 500px; /* Set a specific height for the container */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+.hero_left {
+    flex: 1; /* Allow this section to take up available space */
+    display: flex; /* Use Flexbox for alignment inside */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    padding-right: 20px; /* Add space between text and image */
+    color:#674188; /* Text color for better contrast */
+}
+
+.hero_right {
+    flex: 1; /* Allow this section to take up available space */
+    display: flex; /* Use Flexbox for alignment inside */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    overflow: hidden; /* Hide any overflow of the image */
+}
+
+.hero_right img {
+    width: 100%; /* Make the image scale to the full width of the container */
+    height: 100%; /* Make the image scale to the full height of the container */
+    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+}
+
+/* Optional: Style for the "Order Now" button */
+.hero_fresh_button > div {
+    background: #674188; /* Button background color */
+    color:#F7EFE5; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    display: inline-block; /* Inline block for proper padding */
+    transition: background 0.3s; /* Smooth background color transition */
+}
+
+.hero_fresh_button > div:hover {
+    background: #523e6d; /* Darker color on hover */
+}
+.hero_left p{
+    color:#674188 ;
+    font-weight: 700;
+    font-size: 70px;
+}
+.hero_left h2{
+    color:#674188;
+    font-size: 26px;
+    font-weight: 600;
+}
+.story {
+    background: #674188;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px; /* Adds padding to create space between edges */
+    height: auto; /* Let the height be based on the content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-bottom: 50px;
+}
+
+.story h1 {
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 500;
+    color: #F7EFE5;
+}
+
+.story hr {
+    width: 300px;
+    height: 6px;
+    border-radius: 10px;
+    background: #F7EFE5;
+}
+
+.story_paragraph {
+    margin-top: 30px;
+    display: inline;
+    color: #F7EFE5 ;
+    padding: 0 20px; /* Adds padding on the left and right for space */
+    justify-content: center; /* Centers the items */
+    max-width: 1200px; /* Limits the container width */
+}
+/* instructions */
+.instructions{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px; /* Adds padding to create space between edges */
+    height: auto; /* Let the height be based on the content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-bottom: 50px;
+}
+.instructions h1 {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #674188;
+}
+.instructions_points h2 {
+    font-size: 20px;
+    color: white;
+}
+.instructions_points ul {
+    font-size: 15px;
+    padding-left: 30px;
+}
+.instructions_points{
+    background: black;
+    margin-top: 30px;
+    display: inline;
+    color: #F7EFE5 ;
+    padding: 20px 20px; /* Adds padding on the left and right for space */
+    justify-content: center; /* Centers the items */
+    max-width: 1200px; /* Limits the container width */
+}
+/* footer-css */
+footer {
+    width: 100 vh;
+    height: auto;
+    padding: 50px 100px;
+    background: #F7EFE5;
+    /* margin-top: 100px; */
+}
+
+footer .container {
+    overflow: hidden;
+    width: 100 vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 80px;
+}
+
+footer .container .sec h2 {
+    position: relative;
+    color: none;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer.container.sec p {
+    color: #555;
+}
+
+footer .container .sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+footer .container .sci li {
+    list-style: none;
+}
+
+footer .container .sci li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer .container .sci li a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container .quicklinks {
+    position: relative;
+}
+
+footer .container .quicklinks ul li {
+    list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .container .contact .info {
+    position: relative;
+}
+
+footer .container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .container .contact .info li span {
+    color: black;
+    font-size: 20px;
+}
+
+footer .container .contact .info li a {
+    color: black;
+    text-decoration: none;
+}
+
+.CopyRightText {
+    width: 100%;
+    background: #fff;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #F7EFE5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #674188;
+}

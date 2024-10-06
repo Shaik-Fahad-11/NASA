@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's Green Quest</title>
+    <link rel="stylesheet" href="chapters.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Importance of Biodiversity</h1>
+        <h3>Scenario</h3>
+        <p>Ben notices that the forests are being cleared to make way for a new factory. While replanting trees seems like an easy solution, he realizes that biodiversity in the forest is more important than just planting random trees. A local logging company offers to help, but they want to plant only one type of fast-growing tree to quickly replace the lost forests.</p>
+        <h4>Question</h4>
+        <p>What is the most sustainable decision Ben should make to restore the forest’s biodiversity?</p>
+
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="option" value="A">
+                A. Plant only fast-growing trees to restore the forest quickly.
+            </label>
+            <label>
+                <input type="radio" name="option" value="B">
+                B. Create a reforestation plan with multiple native species that are slow-growing. 
+            </label>
+            <label>
+                <input type="radio" name="option" value="C">
+                C. Focus on planting trees only in open spaces and leave the logging to continue in designated areas.
+            </label>
+            <button type="button" onclick="submitAnswer()">Submit Answer</button>
+        </form>
+        
+        <div id="response"></div>
+    </div>
+
+    <div class="container">
+        <h1>Industrialization vs. Nature</h1>
+        <h3>Scenario</h3>
+        <p>The town council is considering a proposal to build more factories, which would bring jobs and economic growth. However, these factories will likely cut down more forests and increase pollution. Ben knows that the town needs jobs, but he also understands that the environment needs to be protected.</p>
+        <h4>Question</h4>
+        <p>What is the best approach to balancing economic development with environmental preservation?</p>
+
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="option" value="A">
+                A. Build factories but strictly enforce environmental laws like replanting and emissions control.
+            </label>
+            <label>
+                <input type="radio" name="option" value="B">
+                B. Focus on developing eco-friendly industries like renewable energy, even if the job growth is slower.
+            </label>
+            <label>
+                <input type="radio" name="option" value="C">
+                C. Allow unrestricted factory development to boost the economy, trusting the market to eventually restore the environment.
+            </label>
+            <button type="button" onclick="submitAnswer()">Submit Answer</button>
+        </form>
+        
+        <div id="response"></div>
+    </div>
+
+    <div class="container">
+        <h1>The Role of the Community</h1>
+        <h3>Scenario</h3>
+        <p>Ben realizes that replanting the forest cannot be done by just a few people—it requires the whole community. However, many in the town are not motivated to help because they don't see the immediate benefits of forest restoration.</p>
+        <h4>Question</h4>
+        <p>How should Ben convince the community to get involved in replanting the forest?</p>
+
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="option" value="A">
+                A. Create educational programs to teach the town about the long-term benefits of reforestation.
+            </label>
+            <label>
+                <input type="radio" name="option" value="B">
+                B. Offer incentives, like tax breaks or rewards, for those who help with replanting efforts.
+            </label>
+            <label>
+                <input type="radio" name="option" value="C">
+                C. Hire professional reforestation teams to handle the planting, leaving the community out of it.
+            </label>
+            <button type="button" onclick="submitAnswer()">Submit Answer</button>
+        </form>
+        
+        <div id="response"></div>
+    </div>
+
+    <div class="container">
+        <h1>Climate Change and the Forest</h1>
+        <h3>Scenario</h3>
+        <p>Ben hears on the news that climate change is accelerating, and temperatures are rising. He realizes that replanting the forest can help combat this, but the challenge is bigger than just one town. Some people in the town doubt the seriousness of climate change and don't believe that trees can make a difference.</p>
+        <h4>Question</h4>
+        <p>How can Ben address climate change concerns while focusing on reforestation?</p>
+
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="option" value="A">
+                A. Highlight the role of trees in absorbing carbon dioxide and educate the town on the benefits of reducing carbon footprints.
+            </label>
+            <label>
+                <input type="radio" name="option" value="B">
+                B. Focus on local issues like air quality and soil health to gain immediate support for replanting efforts.
+            </label>
+            <label>
+                <input type="radio" name="option" value="C">
+                C. Ignore climate change and focus only on replanting trees for their aesthetic value.
+            </label>
+            <button type="button" onclick="submitAnswer()">Submit Answer</button>
+        </form>
+        
+        <div id="response"></div>
+    </div>
+
+    <div class="container">
+        <h1>Balancing Nature and Technology</h1>
+        <h3>Scenario</h3>
+        <p>Ben learns about new technology that can accelerate reforestation using drones and automated tree planting machines. However, this technology is expensive, and there are concerns that it might harm the soil or plant species that are not suited for the area.</p>
+        <h4>Question</h4>
+        <p>Should Ben use this new technology to quickly regrow the forest, or should he stick with traditional, slower methods?</p>
+
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="option" value="A">
+                A. Use the technology, but only in areas where the soil and ecosystem can handle rapid planting.
+            </label>
+            <label>
+                <input type="radio" name="option" value="B">
+                B. Avoid the technology and rely on traditional methods that take longer but ensure natural regrowth.
+            </label>
+            <label>
+                <input type="radio" name="option" value="C">
+                C. Use the technology everywhere to regrow the forest as quickly as possible, despite the risks.
+            </label>
+            <button type="button"  onclick="window.location.href='c2.html'">Submit Answer</button>
+        </form>
+        
+        <div id="response"></div>
+    </div>
+
+    <script>
+        let score = 100;
+
+        function submitAnswer() {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            const responseDiv = document.getElementById('response');
+            const scoreDiv = document.getElementById('score');
+
+            if (!selectedOption) {
+                responseDiv.innerText = "Please select an answer.";
+                return;
+            }
+
+            if (selectedOption.value === "B") {
+                score += 10; // Correct answer increases score
+                responseDiv.innerText = "Correct! You've chosen the most sustainable option.";
+            } else {
+                score -= 5; // Wrong answer decreases score
+                responseDiv.innerText = "Incorrect. This option could harm biodiversity.";
+            }
+
+            scoreDiv.innerText = `Score: ${score}%`;
+        }
+    </script>
+</body>
+</html>

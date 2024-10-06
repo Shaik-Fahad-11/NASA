@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.finale-container {
+    width: 100 vh;
+    background: url("striving.webp");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color:green;
+}
+
+.summary p {
+    font-size: 1.2em;
+    font-weight: 700;
+    color:black;
+}
+
+.summary .decision-impact {
+    font-style: italic;
+}
+
+.call-to-action button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.call-to-action button:hover {
+    background-color:greenyellow ;
+}
+footer {
+    width: 100 vh;
+    height: auto;
+    padding: 50px 100px;
+    background: #F7EFE5;
+    text-align: left;
+}
+
+footer .container {
+    overflow: hidden;
+    width: 100 vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 80px;
+}
+
+footer .container .sec h2 {
+    position: relative;
+    color: none;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer.container.sec p {
+    color: #555;
+}
+
+footer .container .sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+footer .container .sci li {
+    list-style: none;
+}
+
+footer .container .sci li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer .container .sci li a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container .quicklinks {
+    position: relative;
+}
+
+footer .container .quicklinks ul li {
+    list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .container .contact .info {
+    position: relative;
+}
+
+footer .container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .container .contact .info li span {
+    color: black;
+    font-size: 20px;
+}
+
+footer .container .contact .info li a {
+    color: black;
+    text-decoration: none;
+}
+
+.CopyRightText {
+    width: 100%;
+    background: #fff;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: 333333;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #edebef;
+}
